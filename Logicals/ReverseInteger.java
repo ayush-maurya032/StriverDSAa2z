@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ReverseInteger {
@@ -6,7 +7,7 @@ public class ReverseInteger {
         System.out.println("Enter the number");
         int x = Sc.nextInt();
         int ans = reverse(x);
-        System.out.println(ans);
+        System.out.println(Arrays.toString(ans));
 
     }
 
