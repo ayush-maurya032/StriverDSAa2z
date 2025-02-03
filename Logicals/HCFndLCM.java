@@ -4,13 +4,14 @@ import java.util.Scanner;
 public class HCFndLCM {
     public static void main(String[] args) {
 
-        Scanner Sc = new Scanner(System.in);
-        System.out.println("Enter two numbers");
-        int a = Sc.nextInt();
-        System.out.println();
-        int b = Sc.nextInt();
-        int[] ans = optimal(a, b);
-        System.out.println(Arrays.toString(ans));
+        try (Scanner Sc = new Scanner(System.in)) {
+            System.out.println("Enter two numbers");
+            int a = Sc.nextInt();
+            System.out.println();
+            int b = Sc.nextInt();
+            int[] ans = optimal(a, b);
+            System.out.println(Arrays.toString(ans));
+        }
 
     }
 
@@ -74,17 +75,17 @@ public class HCFndLCM {
         // gcd(5, 5) = gcd(5-5, 5) = gcd(0, 5)
 
         // Hence, return 5 as the gcd.
-       int aa = a;
-       int bb = b;
-        while(a!=0){
-            int min = Math.min(a,b);
+        int aa = a;
+        int bb = b;
+        while (a != 0) {
+            int min = Math.min(a, b);
             int max = a + b - min;
             a = max - min;
             b = min;
         }
-        int hcf =  b;
-        int lcm = aa*bb / hcf;
-        return new int[]{hcf,lcm};
+        int hcf = b;
+        int lcm = aa * bb / hcf;
+        return new int[] { hcf, lcm };
     }
 
 }
