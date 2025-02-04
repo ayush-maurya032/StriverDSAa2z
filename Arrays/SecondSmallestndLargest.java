@@ -12,6 +12,8 @@ public class SecondSmallestndLargest {
         brute(arr);
         better(arr);
         optimal(arr);
+        Sc.close();
+
     }
 
     public static void brute(int[] arr) {

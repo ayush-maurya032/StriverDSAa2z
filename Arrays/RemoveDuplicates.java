@@ -19,6 +19,7 @@ public class RemoveDuplicates {
         int ans = removeduplicates(arr);
         System.out.println("The number of unique elements :" + ans);
         System.out.println(Arrays.toString(arr));
+        Sc.close();
     }
 
     public static int removeduplicates(int[] arr) {

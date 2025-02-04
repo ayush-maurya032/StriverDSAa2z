@@ -9,6 +9,8 @@ public class CheckSorted {
             arr[i] = Sc.nextInt();
         }
         System.out.println(check(arr));
+        Sc.close();
+
     }
 
         public static boolean check(int[] arr){

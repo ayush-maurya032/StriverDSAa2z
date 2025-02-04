@@ -21,6 +21,8 @@ public class RotateArray {
         }
         rotate(arr,k);
         System.out.println(Arrays.toString(arr));
+        Sc.close();
+
     }
 
 
