@@ -8,7 +8,7 @@ public class LongestSubArray {
         int k = Sc.nextInt();
 
         // nt[] arr = { -2, -3, 4, -1, -2, 1, 5, -3 };
-        int[] arr = { 2, -1, 3, -2, 4, -3, 1, 5 };
+        int[] arr = { 2,7,11,15 };
 
         // ystem.out.println(longestsubarraybrutest(arr, k));
         // stem.out.println(longestsubarraybetter1(arr, k));
