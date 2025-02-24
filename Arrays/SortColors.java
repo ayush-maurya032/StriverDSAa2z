@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 public class SortColors {
     public static void main(String[] args) {
-         Scanner Sc = new Scanner(System.in);
+        Scanner Sc = new Scanner(System.in);
         System.out.println("Enter the limit");
         int n = Sc.nextInt();
 
@@ -30,40 +30,65 @@ public class SortColors {
         System.out.println(Arrays.toString(arr));
     }
 
-
     public static void sortColorsbetter(int[] nums) {
         int n = nums.length;
         int c0 = 0;
         int c1 = 0;
         int c2 = 0;
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
 
-            if(nums[i] == 0){
+            if (nums[i] == 0) {
                 c0++;
-            }
-            else if (nums[i] == 1){
+            } else if (nums[i] == 1) {
                 c1++;
-            }
-            else
-            {
+            } else {
                 c2++;
             }
         }
 
-        for(int i =0; i < c0; i++){
+        for (int i = 0; i < c0; i++) {
             nums[i] = 0;
         }
-        for(int i = c0; i < c0+c1; i++){
+        for (int i = c0; i < c0 + c1; i++) {
             nums[i] = 1;
         }
-        for(int i = c0+c1; i < n; i++){
+        for (int i = c0 + c1; i < n; i++) {
             nums[i] = 2;
         }
 
-
-
-
-
     }
-}
+    // Dutch National Flag Algorithm 
+    //Using three pointers
+    public static void sortColorsOptimal(int[] nums){
 
+        int n = nums.length;
+        int low = 0; 
+        int high = n-1;
+        int mid = 0;
+        while(mid <= high){
+         
+          if(nums[mid] == 0){
+              swap(nums[mid], nums[low]);
+          }
+
+          else if(nums[mid] == 1){
+              mid++;
+          }
+
+          else{
+              swap(nums[mid], nums[high]);
+          }
+
+
+
+
+        }
+    }
+
+    public static void swap(int a, int b) {
+        int temp = a;
+        a = b;
+        b = temp;
+    }
+
+}
