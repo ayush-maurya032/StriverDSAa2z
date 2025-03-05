@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 //rotating right
@@ -19,7 +20,7 @@ public class RotateArray {
             arr[i] = Sc.nextInt();
         
         }
-        rotate(arr,k);
+        rotatebetter(arr,k);
         System.out.println(Arrays.toString(arr));
         Sc.close();
 
@@ -49,6 +50,30 @@ public class RotateArray {
              start++;
              end--;
          }
+     }
+
+
+    //left rotation;
+     public static void rotatebetter(int[] nums, int k){
+        int n = nums.length;
+        k = k % n;
+        ArrayList<Integer> list = new ArrayList<>();
+        //temporary dtoring the k elements from beginning
+        for(int i =0; i < k; i++){
+            list.add(nums[i]);
+        }
+
+        //shifting
+        for(int i =k; i<n; i++){
+            nums[i-k] = nums[i];
+        }
+        
+       //Placing the shifters
+
+        for(int i = n-k; i<n; i++){
+            nums[i] = list.remove(0);
+        }
+
      }
  
 
