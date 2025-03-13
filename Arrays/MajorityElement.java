@@ -68,6 +68,7 @@ public class MajorityElement {
                 cnt1++;
             }
         }
+        //if and only if problem says there may or may not be a majority then check
         if (cnt1 > n / 2) {
             return el;
         }

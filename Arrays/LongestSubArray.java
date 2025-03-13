@@ -84,7 +84,10 @@ public class LongestSubArray {
         }
         return (ansEnd - ansStart + 1);
     }
-
+    
+    
+    
+    //important to understand work s for negatives ...
     public static int longestsubarrayusinghashmap(int[] arr, int k) {
 
         int n = arr.length;
