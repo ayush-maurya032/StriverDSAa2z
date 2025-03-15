@@ -28,6 +28,7 @@ public class SortColors {
 
         sortColorsbetter(arr);
         System.out.println(Arrays.toString(arr));
+        Sc.close();
     }
 
     public static void sortColorsbetter(int[] nums) {

@@ -13,6 +13,7 @@ public class LongestSubArray {
         // ystem.out.println(longestsubarraybrutest(arr, k));
         // stem.out.println(longestsubarraybetter1(arr, k));
         System.out.println(longestsubarrayslidingwindow(arr, k));
+        Sc.close();
     }
 
     // O(n^3)

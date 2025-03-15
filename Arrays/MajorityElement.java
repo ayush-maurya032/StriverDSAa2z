@@ -21,6 +21,7 @@ public class MajorityElement {
        System.out.println("answer is:");
         System.out.println(majorityElementOptimal(arr));
         System.out.println(majorityElementbrute(arr));
+        Sc.close();
     }
 
     public static int majorityElementbrute(int[] nums) {

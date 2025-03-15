@@ -15,6 +15,8 @@ public class MaximumConsecutiveOnes {
 
         int ans  = findMaxConsecutiveOnes(arr);
         System.out.println(ans);
+
+        Sc.close();
     }
 
     public static int findMaxConsecutiveOnes(int[] nums) {
