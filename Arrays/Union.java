@@ -11,6 +11,8 @@ public class Union {
         System.out.println("Union of arr1 and arr2 is ");
         for (int val : Union)
             System.out.print(val + " ");
+
+          
     }
 
     // works on unsorted too.

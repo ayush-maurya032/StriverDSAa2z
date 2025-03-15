@@ -19,7 +19,7 @@ public class SingleNumber {
         System.out.println(singleNumberBetter1(arr));
         System.out.println(singleNumberBetter2(arr));
         System.out.println(singleNumberOptimal(arr));
-       
+       Sc.close();
     }
 
     public static int singleNumberBrute(int[] nums) {
