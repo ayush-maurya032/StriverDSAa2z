@@ -38,7 +38,7 @@ public class MajorityElement {
             }
         }
 
-        return -1;
+        return -2;
     }
 
     // Moore's Voting Algo
