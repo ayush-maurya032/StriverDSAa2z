@@ -7,6 +7,7 @@ public class ReverseInteger {
         int x = Sc.nextInt();
         int ans = reverse(x);
         System.out.println(ans);
+        Sc.close();
 
     }
 
