@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class Union {
     public static void main(String[] args) {
-        int n = 10, m = 7;
+        //int n = 10; int m = 7;
         int arr1[] = { 1, 2, 7, 4, 5, 12, 7, 8, 9, 10 };
         int arr2[] = { 2, 3, 4, 4, 5, 11, 12 };
         ArrayList<Integer> Union = UnionByHashMap(arr1, arr2);
