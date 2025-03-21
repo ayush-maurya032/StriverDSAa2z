@@ -60,30 +60,30 @@ public class Intersection {
         return newans;
     }
 
-   public static int[] optimal(int[] arr1, int[] arr2){
+    public static int[] optimal(int[] arr1, int[] arr2) {
 
-    int n1 = arr1.length;
-    int n2 = arr2.length;
-    int i = 0; int j =0;
-    ArrayList<Integer> ans = new ArrayList<>();
-    while(i<n1){
+        int n1 = arr1.length;
 
-        if(arr1[i] == arr2[j]){
-            ans.add(arr1[i]);
-            i++;
-            j++;
+        int i = 0;
+        int j = 0;
+        ArrayList<Integer> ans = new ArrayList<>();
+        while (i < n1) {
+
+            if (arr1[i] == arr2[j]) {
+                ans.add(arr1[i]);
+                i++;
+                j++;
+            } else {
+                i++;
+            }
         }
-        else{
-            i++;
-        }
-    }
 
-    int n = ans.size();
-    int[] newans = new int[n];
+        int n = ans.size();
+        int[] newans = new int[n];
         for (int num = 0; num < n; num++) {
             newans[num] = ans.remove(0);
         }
         return newans;
-   }
+    }
 
 }

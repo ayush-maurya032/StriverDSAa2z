@@ -43,7 +43,7 @@ public class SortColors {
             } else if (nums[i] == 1) {
                 c1++;
             } else {
-                c2++;
+                c2 = c2 + 1;
             }
         }
 
@@ -58,30 +58,28 @@ public class SortColors {
         }
 
     }
-    // Dutch National Flag Algorithm 
-    //Using three pointers
-    public static void sortColorsOptimal(int[] nums){
+
+    // Dutch National Flag Algorithm
+    // Using three pointers
+    public static void sortColorsOptimal(int[] nums) {
 
         int n = nums.length;
-        int low = 0; 
-        int high = n-1;
+        int low = 0;
+        int high = n - 1;
         int mid = 0;
-        while(mid <= high){
-         
-          if(nums[mid] == 0){
-              swap(nums[mid], nums[low]);
-          }
+        while (mid <= high) {
 
-          else if(nums[mid] == 1){
-              mid++;
-          }
+            if (nums[mid] == 0) {
+                swap(nums[mid], nums[low]);
+            }
 
-          else{
-              swap(nums[mid], nums[high]);
-          }
+            else if (nums[mid] == 1) {
+                mid++;
+            }
 
-
-
+            else {
+                swap(nums[mid], nums[high]);
+            }
 
         }
     }
