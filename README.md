@@ -27,7 +27,7 @@ The repository follows a structured approach, covering:
 
 ## 🛠️ Tech Stack
 - **Language:** Java ☕
-- **Platform:** Leetcode, CodeStudio, GeeksforGeeks
+- **Platform:** Leetcode, CodeStudio, GeeksforGeeks, coding ninjas
 - **Version Control:** Git & GitHub
 
 ## 🔗 Resources
