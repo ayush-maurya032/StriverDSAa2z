@@ -2,9 +2,8 @@ import java.util.Scanner;
 
 public class ReverseInteger {
     public static void main(String[] args) {
-        Scanner Sc = new Scanner(System.in);
-        System.out.println("Enter the number");
-        int x = Sc.nextInt();
+       
+        int x = 2327;
         int ans = reverse(x);
         System.out.println(ans);
         Sc.close();
