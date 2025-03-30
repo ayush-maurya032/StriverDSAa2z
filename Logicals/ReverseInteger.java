@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 
 public class ReverseInteger {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class ReverseInteger {
         int x = 2327;
         int ans = reverse(x);
         System.out.println(ans);
-        Sc.close();
+        
 
     }
 
