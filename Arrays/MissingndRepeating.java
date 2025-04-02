@@ -90,4 +90,5 @@ public class MissingndRepeating{
 
         return new int[] {(int)x, (int)y};
     }
+    //THere is a also a xor method which will be covered after bit manipulation.
 }
