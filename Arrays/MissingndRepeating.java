@@ -7,6 +7,7 @@ public class MissingndRepeating{
     public static void main(String[] args) {
         int[] arr = {4,3,6,2,1,1};
         System.out.println(Arrays.toString(brute(arr)));
+        System.out.println(Arrays.toString(better(arr)));
     }
 
     public static int[] brute(int[] arr){
@@ -36,5 +37,28 @@ public class MissingndRepeating{
             }
         }
      return new int[] {repeating, missing};
+    }
+
+    public static int[] better(int[] arr){
+        int n = arr.length;
+        int a = -1;
+        int b = -1;
+        int[] hasharr = new int[n + 1];
+        
+        for(int i = 0; i < n; i++){
+            int index = arr[i];
+            hasharr[index]++;
+        }
+        
+        for(int i = 1; i < n + 1; i++){
+            if(hasharr[i] == 0){
+                a = i;
+            }
+            if(hasharr[i] > 1){
+                b = i;
+            }
+        }
+        
+        return new int[] {b,a};
     }
 }
