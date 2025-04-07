@@ -1,5 +1,3 @@
-
-
 public class ValidPalindrome {
 public static void main(String[] args) {
     String s = "Ac3?e3c&a";
