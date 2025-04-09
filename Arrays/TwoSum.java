@@ -21,6 +21,7 @@ public class TwoSum {
         // }
         // }
         // return new int[]{-1,-1};
+//better option
         int[] ans = new int[2];
         ans[0] = ans[1] = -1;
         HashMap<Integer, Integer> mpp = new HashMap<>();
