@@ -1,8 +1,13 @@
-public class Solution {
+import java.util.Arrays;
+
+public class FirstAndLast {
     public static void main(String[] args){
+
+        int[] nums = {2,4,6,8,8,8,11,13};
+        int target = 8;
         int first = findFirstOccurrence(nums, target);
         int last = findLastOccurrence(nums, target);
-        so
+        System.out.println(Arrays.toString(new int[] {first, last}));
     }
 
     public  static int findFirstOccurrence(int[] nums, int target) {
