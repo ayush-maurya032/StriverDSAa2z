@@ -5,8 +5,8 @@ public class FirstAndLast {
 
         int[] nums = {2,4,6,8,8,8,11,13};
         int target = 8;
-        int first = findFirstOccurrence(nums, target);
-        int last = findLastOccurrence(nums, target);
+        int first = findFirstOccurrence(nums, target);//its simply lower bound 
+        int last = findLastOccurrence(nums, target); // its simply upper bound 
         System.out.println(Arrays.toString(new int[] {first, last}));
     }
 
