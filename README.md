@@ -6,7 +6,7 @@ This repository contains my **Daily DSA (Data Structures & Algorithms) Practice*
 
 ## 📜 Structure of the Repository
 - The repository is organized based on Striver’s **A2Z DSA Sheet**.
-- Each topic is covered in separate folders containing relevant problems and solutions.
+- Each topic is covered in a separate folder containing relevant problems and solutions.
 - Solutions are implemented in **Java**.
 
 ## 📅 Daily Progress
