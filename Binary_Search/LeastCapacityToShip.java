@@ -49,6 +49,7 @@ public class LeastCapacityToShip{
     public static void main(String[] args) {
         int[] weights = {1,2,3,4,5,6,7,8,9,10};
         System.out.println(shipWithinDaysbrute(weights, 5));
+        System.out.println(shipWithinDaysOptimal(weights, 5));
     }
     public static int shipWithinDaysbrute(int[] weights, int days) {
         int n = weights.length;
@@ -68,6 +69,38 @@ public class LeastCapacityToShip{
         return max;
     }
 
+    public static int shipWithinDaysOptimal(int[] weights, int days) {
+        int n = weights.length;
+        int max = weights[0];
+        int sum = 0;
+        for(int i = 0; i < n; i++){
+            sum += weights[i];
+            max = Math.max(max,weights[i]);
+        }
+
+        // for(int cap = max; cap <= sum; cap++){
+        //     int daysRequired = fun(weights, cap);
+        //     if(daysRequired <= days){
+        //         return cap;
+        //     }
+        // }
+        // return max;
+        int low = max;
+        int high = sum;
+        while(low <= high){
+            int mid = low + (high - low) / 2;
+
+            int noOfDays = fun(weights, mid);
+            if(noOfDays <= days){
+                high = mid - 1;
+            }
+            else{
+                low = mid + 1;
+            }
+        }
+        return low;
+    }
+
    static int fun(int[] weights, int capacity){
         int noOfdays = 1; int load = 0;
         for(int i = 0; i < weights.length; i++){
@@ -81,6 +114,6 @@ public class LeastCapacityToShip{
         }
         return noOfdays;
     }
-
+    
 
 }
