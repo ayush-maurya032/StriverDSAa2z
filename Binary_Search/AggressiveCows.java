@@ -5,7 +5,22 @@ public class AggressiveCows {
         int[] stalls = { 3, 0, 4, 11, 9, 7 };
         int k = 4;
         System.out.println(aggressiveCows(stalls, k));
+        System.out.println(bruteapproach(stalls, k));
 
+    }
+
+    public static int bruteapproach(int[] stalls, int k) {
+        Arrays.sort(stalls);
+        int n = stalls.length;
+        for (int i = 1; i <= (stalls[n - 1] - stalls[0]); i++) {
+            if (canWePlace(stalls, i, k) == true) {
+                continue;
+            } else {
+                return i - 1;
+            }
+
+        }
+        return n;
     }
 
     public static int aggressiveCows(int[] stalls, int k) {
