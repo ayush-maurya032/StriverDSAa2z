@@ -1,6 +1,18 @@
+import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class MinimiseMaxDistance {
+    public static class Pair {
+        double first;
+        int second;
+
+        Pair(double first, int second) {
+            this.first = first;
+            this.second = second;
+
+        }
+    }
+
     public static void main(String[] args) {
         Scanner Sc = new Scanner(System.in);
         System.out.println("Enter the size of array");
@@ -13,7 +25,7 @@ public class MinimiseMaxDistance {
         System.out.println("Enter the value of GasStations");
         int gasStations = Sc.nextInt();
 
-        double ans = minimiseBrute(arr, gasStations);
+        double ans = minimiseBetter(arr, gasStations);
         System.out.println(ans);
 
     }
@@ -47,4 +59,34 @@ public class MinimiseMaxDistance {
         return maxAns;
     }
 
+    public static double minimiseBetter(int[] arr, int k) {
+        int n = arr.length;
+        int howMany[] = new int[n - 1];
+        PriorityQueue<Pair> pq = new PriorityQueue<>((a, b) -> Double.compare(b.first, a.first));
+        // insert the n-1 elements into pq, wrt to respective distance values
+
+        for (int i = 0; i < n - 1; i++) {
+            pq.add(new Pair((arr[i + 1] - arr[i]), i));
+        }
+
+        // pick and place gas stations.
+
+        for (int gasStation = 1; gasStation <= k; gasStation++) {
+            // find max section and then insert the gs
+
+            Pair tcp = pq.poll();
+            int secInd = tcp.second;
+
+            // insert the current gas station
+            howMany[secInd]++;
+
+            double diff = arr[secInd + 1] - arr[secInd];
+            double newSecLen = diff / ((double) (howMany[secInd] +
+                    1));
+
+            pq.add(new Pair(newSecLen, secInd));
+
+        }
+        return pq.peek().first;
+    }
 }
