@@ -89,4 +89,40 @@ public class MinimiseMaxDistance {
         }
         return pq.peek().first;
     }
+
+    public static double minimiseOptimal(int[] arr, int k) {
+        double low = 0;
+        double high = 0;
+        for (int i = 0; i < arr.length - 1; i++) {
+            high = Math.max(high, (double) (arr[i + 1] - arr[i]));
+        }
+        double ans = 0.0;
+        double diff = 1e-6;
+        while (high - low > diff) {
+            double mid = (low + high) / 2.0;
+            int cnt = numberofGasStation(mid, arr);
+            if (cnt > k) {
+                low = mid;
+            } else {
+                ans = high;
+                high = mid;
+            }
+
+        }
+        return high;
+    }
+
+    static int numberofGasStation(double dist, int[] arr) {
+        int cnt = 0;
+        for (int i = 1; i < arr.length; i++) {
+            int numberInBetween = arr[i + 1] - arr[i];
+            if ((arr[i + 1] - arr[i]) / dist == numberInBetween * dist) {
+                numberInBetween--;
+            }
+            cnt += numberInBetween;
+
+        }
+        return cnt;
+    }
+
 }
