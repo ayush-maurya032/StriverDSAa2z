@@ -51,3 +51,4 @@ public class KthElement {
         return 0;
     }
 }
+//refer brute and better in notes or previoius similar questions
