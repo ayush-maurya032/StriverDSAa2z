@@ -1,4 +1,4 @@
-# StriverDSAa2z Sheet
+# StriverDSAa2z Sheet solve
  🚀
 
 ## 📌 About This Repository
