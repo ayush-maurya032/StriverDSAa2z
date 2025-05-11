@@ -13,6 +13,7 @@ public class HCFndLCM {
             System.out.println(Arrays.toString(ans));
         }
 
+        
     }
 
     public static int[] brute(int a, int b) {
