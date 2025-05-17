@@ -1,5 +1,6 @@
 # StriverDSAa2z Sheet solve
  🚀
+ getting mad !
 
 ## 📌 About This Repository
 This repository contains my **Daily DSA (Data Structures & Algorithms) Practice** as I follow **Striver's A2Z DSA Sheet**. My goal is to strengthen my problem-solving skills by consistently coding and tracking my progress.
