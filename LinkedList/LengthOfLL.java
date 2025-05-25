@@ -1,5 +1,5 @@
 class Node {
-    
+
     int data;
     Node next;
 
@@ -10,14 +10,14 @@ class Node {
 }
 
 public class LengthOfLL {
-public static void main(String[] args) {
-    Node head = new Node(10);
-    head.next = new Node(11);
-    head.next.next = new Node(111);
-    head.next.next.next = new Node(2712);
-    System.out.println(length(head));
-    
-}
+    public static void main(String[] args) {
+        Node head = new Node(10);
+        head.next = new Node(11);
+        head.next.next = new Node(111);
+        head.next.next.next = new Node(2712);
+        System.out.println(length(head));
+
+    }
 
     static int length(Node head) {
         int cnt = 0;
