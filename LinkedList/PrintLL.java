@@ -17,6 +17,7 @@ public class PrintLL {
         head.next.next = new Node(30);
         head.next.next.next = new Node(40);
 
+
         printList(head);
     }
 
@@ -25,6 +26,7 @@ public class PrintLL {
             System.out.print(head.data + "-->");
             head = head.next;
         }
+        System.out.print("null");
         System.out.println();
     }
 }
